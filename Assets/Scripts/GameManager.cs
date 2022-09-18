@@ -30,15 +30,18 @@ public class GameManager : MonoBehaviour {
     }
 
     void SpawnRunners(GameObject runner1Prefab, GameObject runner2Prefab) {
-        GameObject runner1 = Instantiate(runner1Prefab, track1.TrackStartPosition, runner1Prefab.transform.rotation);
-        runner1.GetComponent<Animal>().SetDestination(track1.TrackEndPosition);
 
-        GameObject runner2 = Instantiate(runner2Prefab, track2.TrackStartPosition, runner1Prefab.transform.rotation);
-        runner2.GetComponent<Animal>().SetDestination(track2.TrackEndPosition);
+        var pc = GetComponent<MoveTester>();
 
-        var pc = GetComponent<PlayerControl>();
-        pc.runner1 = runner1.GetComponent<Rigidbody>();
-        pc.runner2 = runner2.GetComponent<Rigidbody>();
+        GameObject runnerObject1 = Instantiate(runner1Prefab, track1.TrackStartPosition, runner1Prefab.transform.rotation);
+        var runner1 = runnerObject1.GetComponent<Animal>();
+        runner1.SetDestination(track1.TrackEndPosition);
+        pc.runner1 = runner1;
+
+        GameObject runnerObject2 = Instantiate(runner2Prefab, track2.TrackStartPosition, runner1Prefab.transform.rotation);
+        var runner2 = runnerObject2.GetComponent<Animal>();
+        runner2.SetDestination(track2.TrackEndPosition);
+        pc.runner2 = runner2;
     }
 }
 

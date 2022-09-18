@@ -6,10 +6,17 @@ namespace Animals {
     public class Dog : Animal {
 
         [SerializeField]
-        float speed = 10f;
+        private float impulse = 10;
 
         public override void Move() {
-            //animalRigidBody.
+            StartCoroutine(StrideMove(animalRigidBody));
+        }
+
+        IEnumerator StrideMove(Rigidbody rb) {
+            while (true) {
+                rb.AddForce(Vector3.right * impulse, ForceMode.Impulse);
+                yield return new WaitForSeconds(1);
+            }
         }
     }
 }

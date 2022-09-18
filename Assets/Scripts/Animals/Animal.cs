@@ -28,10 +28,7 @@ namespace Animals {
             TargetPosition = destination;
         }
 
-        public virtual void Move() {
-            
-
-        }
+        public abstract void Move();
     }
 
 }
