@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AnimalRacers {
     public class RabbitRacer : AnimalRacer {
         //INHERITANCE
-        private bool grounded = true;
+        private bool grounded;
         public override void Move() { //POLYMORPHISM
             StartCoroutine(HopMove(RacerRigidBody));
         }
@@ -18,12 +18,14 @@ namespace AnimalRacers {
 
         void OnCollisionExit(Collision other) {
             if (other.gameObject.CompareTag("Ground")) {
+                grounded = false;
             }
         }
 
         IEnumerator HopMove(Rigidbody rb) {
             while (true) {
                 rb.AddForce((Vector3.right * 1.1f + Vector3.up * 0.9f).normalized * Impulse, ForceMode.Impulse);
+                grounded = false;
                 yield return new WaitUntil(IsGrounded);                
             }
         }

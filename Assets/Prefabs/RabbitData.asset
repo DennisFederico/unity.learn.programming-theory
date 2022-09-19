@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de2707c2b27342029769ed6ad98b4d0, type: 3}
   m_Name: RabbitData
   m_EditorClassIdentifier: 
+  animalType: 0
   animalName: Rabbit
   racerNames:
   - Fox Chow
