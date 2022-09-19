@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 446770990180291090}
   - component: {fileID: 6855898993244574238}
   - component: {fileID: 8295390519101869066}
+  - component: {fileID: 607300705470584368}
   m_Layer: 5
   m_Name: RacerSelection
   m_TagString: Untagged
@@ -877,6 +878,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &607300705470584368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207381475582847356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a728283e5f3e94f25ba8c0ad0133ecea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalData: {fileID: 0}
+  racerName: {fileID: 5691304735945905891}
+  racerThumbnail: {fileID: 1452985321201449089}
+  racer1Toggle: {fileID: 5457096848223982659}
+  racer2Toggle: {fileID: 6534772568611373700}
 --- !u!1 &6930998174318197997
 GameObject:
   m_ObjectHideFlags: 0

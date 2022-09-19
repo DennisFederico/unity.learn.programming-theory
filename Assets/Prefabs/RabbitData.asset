@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de2707c2b27342029769ed6ad98b4d0, type: 3}
+  m_Name: RabbitData
+  m_EditorClassIdentifier: 
+  animalName: Rabbit
+  racerNames:
+  - Fox Chow
+  - Not Thumper
+  bio: Fluffly tail and sharp teeth... time to strech your legs
+  prefab: {fileID: 8111434410415215101, guid: fe84bccc9a0fb4951b1c5c7193410d1a, type: 3}
+  thumbnail: {fileID: 21300000, guid: d188b8d0dd96a4e34a1faaeaf09a6279, type: 3}
+  impulse: 10
