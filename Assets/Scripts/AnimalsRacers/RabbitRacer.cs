@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace AnimalRacers {
     public class RabbitRacer : AnimalRacer {
-
-        [SerializeField]
-        private float impulse = 10;
-
         public override void Move() {
             StartCoroutine(HopMove(racerRigidBody));
         }
@@ -19,7 +15,7 @@ namespace AnimalRacers {
         
         IEnumerator HopMove(Rigidbody rb) {
             while (true) {
-                rb.AddForce((Vector3.right + Vector3.up).normalized * impulse, ForceMode.Impulse);
+                rb.AddForce((Vector3.right + Vector3.up).normalized * Impulse, ForceMode.Impulse);
                 yield return new WaitForSeconds(1);
             }
         }
