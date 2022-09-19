@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de2707c2b27342029769ed6ad98b4d0, type: 3}
   m_Name: BirdData
   m_EditorClassIdentifier: 
+  animalType: 2
   animalName: Bird
   racerNames:
   - Millennial Falcon
@@ -19,4 +20,4 @@ MonoBehaviour:
   bio: Raised from a wealthy family... more blah blah...
   prefab: {fileID: 8260870060693674964, guid: 267564d05716f4c7299b794ba67bd6d0, type: 3}
   thumbnail: {fileID: 21300000, guid: e225fa3993104454a93c8d55ba7f2917, type: 3}
-  impulse: 10
+  impulse: 2.5

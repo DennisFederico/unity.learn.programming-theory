@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Animals {
-    public class Rabbit : Animal {
+namespace AnimalRacers {
+    public class RabbitRacer : AnimalRacer {
 
         [SerializeField]
         private float impulse = 10;
 
         public override void Move() {
-            StartCoroutine(HopMove(animalRigidBody));
+            StartCoroutine(HopMove(racerRigidBody));
+        }
+
+        public override void Stop() {
+            StopAllCoroutines();
+            racerRigidBody.velocity = Vector3.right * 0.1f;
         }
         
         IEnumerator HopMove(Rigidbody rb) {

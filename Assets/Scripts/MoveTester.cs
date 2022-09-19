@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Animals;
+using AnimalRacers;
 
 public class MoveTester : MonoBehaviour {
-    public Animal runner1;
-    public Animal runner2;
-
-    public float force = 10;
-    public float impulse = 10;
-
+    public AnimalRacer runner1;
+    public AnimalRacer runner2;
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Q)) {
@@ -21,8 +17,8 @@ public class MoveTester : MonoBehaviour {
             runner2.Move();
         }
 
-        if (Input.GetKeyDown(KeyCode.R)) {
-            SceneManager.LoadScene(0);
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            SceneManager.LoadScene("Scenes/RaceScene");
         }
     }
 }

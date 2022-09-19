@@ -7,13 +7,13 @@ public class RaceData : MonoBehaviour {
     public static RaceData Instance { get; private set; }
 
     [SerializeReference]
-    public Racer racer1 = new Racer();
+    public Racer racer1;
     [SerializeReference]
-    public Racer racer2 = new Racer();
+    public Racer racer2;
 
     void Awake() {
         if (Instance != null && Instance != this) {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
