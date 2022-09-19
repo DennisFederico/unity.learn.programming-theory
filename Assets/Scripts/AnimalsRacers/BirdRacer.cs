@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AnimalRacers {
     public class BirdRacer : AnimalRacer {
+
+        static Vector3 flyVector = (Vector3.right + Vector3.up * .35f).normalized;
+
         public override void Move() {
             StartCoroutine(WingMove(racerRigidBody));
         }
@@ -16,7 +19,7 @@ namespace AnimalRacers {
 
         IEnumerator WingMove(Rigidbody rb) {
             while (true) {
-                rb.AddForce(Vector3.right * Impulse, ForceMode.Impulse);
+                rb.AddForce(flyVector * Impulse, ForceMode.Impulse);
                 yield return new WaitForSeconds(1);
             }
         }
