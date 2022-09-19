@@ -5,6 +5,8 @@ using AnimalRacers;
 
 namespace AnimalRacerExtensions {
     public static class AnimalRacerExtension {
+
+        //POLYMORPHISM
         public static string RacerState(this AnimalRacer racer) {
             var rb = racer.GetComponent<Rigidbody>();
             return $"Impulse: {racer.Impulse}<br>"

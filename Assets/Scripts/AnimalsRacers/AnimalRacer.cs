@@ -6,33 +6,21 @@ namespace AnimalRacers {
 
     [RequireComponent(typeof(Rigidbody))]
     public abstract class AnimalRacer : MonoBehaviour {
-
-        [field: SerializeField]
+        //ABSTRACTION
+        protected Rigidbody RacerRigidBody {get; private set; } //ENCAPSULATION
         public string RacerName {get; set; }
-
-        [field: SerializeField]
         public float Impulse {get; set; }
-
-        [field: SerializeField]
-        protected Vector3 StartPosition { get; private set; }
-
-        [field: SerializeField]
-        protected Vector3 TargetPosition { get; private set; }
-
-        protected Rigidbody racerRigidBody;
         
         void Awake() {
-            racerRigidBody = GetComponent<Rigidbody>();
-            StartPosition = transform.position;
+            RacerRigidBody = GetComponent<Rigidbody>();
         }
 
-        public virtual void SetDestination(Vector3 destination) {
-            TargetPosition = destination;
+        public abstract void Move(); //POLIMORPHISM
+
+        public virtual void Stop() { //ABSTRACTION
+            StopAllCoroutines();
+            RacerRigidBody.velocity = Vector3.right * 0.1f;
         }
-
-        public abstract void Move();
-
-        public abstract void Stop();
     }
 
 }

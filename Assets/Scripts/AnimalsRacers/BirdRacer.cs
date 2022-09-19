@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace AnimalRacers {
+    //INHERITANCE
     public class BirdRacer : AnimalRacer {
 
         static Vector3 flyVector = (Vector3.right + Vector3.up * .35f).normalized;
 
-        public override void Move() {
-            StartCoroutine(WingMove(racerRigidBody));
-        }
-
-        public override void Stop() {
-            StopAllCoroutines();
-            racerRigidBody.velocity = Vector3.right * 0.1f;
-            racerRigidBody.useGravity=true;
+        public override void Move() { //POLYMORPHISM
+            StartCoroutine(WingMove(RacerRigidBody));
         }
 
         IEnumerator WingMove(Rigidbody rb) {

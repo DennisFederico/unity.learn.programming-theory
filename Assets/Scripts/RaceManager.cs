@@ -45,12 +45,10 @@ public class RaceManager : MonoBehaviour {
     void SpawnRacers() {
         var runner1 = AnimalScriptableObject.CreateAnimalRacer(RaceData.Instance.racer1, track1.TrackStartPosition);
         racer1 = runner1.GetComponent<AnimalRacer>();
-        racer1.SetDestination(track1.TrackEndPosition);
         track1.TrackRacer(racer1);
 
         var runner2 = AnimalScriptableObject.CreateAnimalRacer(RaceData.Instance.racer2, track2.TrackStartPosition);
         racer2 = runner2.GetComponent<AnimalRacer>();
-        racer2.SetDestination(track1.TrackEndPosition);
         track2.TrackRacer(racer2);
 
         var pc = GetComponent<MoveTester>();

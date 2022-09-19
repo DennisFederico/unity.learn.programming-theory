@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace AnimalRacers {
+    //INHERITANCE
     public class DogRacer : AnimalRacer {
-        public override void Move() {
-            StartCoroutine(StrideMove(racerRigidBody));
-        }
-
-        public override void Stop() {
-            StopAllCoroutines();
-            racerRigidBody.velocity = Vector3.right * 0.1f;
+        public override void Move() { //POLYMORPHISM
+            StartCoroutine(StrideMove(RacerRigidBody));
         }
 
         IEnumerator StrideMove(Rigidbody rb) {
